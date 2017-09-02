@@ -1,50 +1,57 @@
-% enter a tree in adjacency matrix format
-% find a node and print the path to it
+% Program to perform DFS of a tree whose adjacency matrix is given
 
-prompt = 'Enter no. of nodes:  ';
-n = input(prompt);
+n = 6;
 
-my_tree = zeros(n,n);
+my_tree = [0 1 1 0 0 0; 0 0 0 1 0 0; 0 0 0 0 1 1; 0 0 0 0 0 0; 0 0 0 0 0 0; 0 0 0 0 0 0];
+%my_tree = [0 1 1 0 0 0 0 0 0; 0 0 0 1 1 0 0 0 0; 0 0 0 0 0 0 0 1 1; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 1 1 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0];  
 
-fprintf('Enter the adjacency matrix\n ');
-fprintf('Enter 1 if j is a child of i in (i,j) else 0\n ');
-
-for i=1:n
-    for j=1:n
-        prompt = 'Enter matrix element:  ';
-        my_tree(i,j)= input(prompt);
-    end
-end
-
+fprintf('\nThe tree consists of %d nodes, numbered 1 to %d\n', n, n);
 prompt = 'Enter node you are looking for: ';
 node = input(prompt);
-i=1;
-j=1;
+
+i = 1;
+j = 1;
 flag = 0;
 stack = java.util.Stack();
 while(i<=n)
-    if(i == 1 && j>n)
+    if(i == 1 && j > n)
         break;
     end
+    if(j > n)
+        if(~stack.empty())
+            j = i+1;
+            i = stack.pop();
+        else
+            break;
+        end
+    end
     while(j<=n)
-        if(my_tree(i,j)==1 && j<=n)
+        if(i == node)
+            flag = 1;
+            stack.push(i);
+            break;
+        end
+        if(my_tree(i,j) == 1 && j <= n)
             %push i into stack
             stack.push(i);
             i = j;
             j = 1;
-            if(i == node)
-                flag = 1;
-                break;
-            end
             continue; 
         end
         if(j >= n)
-            j = i+1;
-            %pop stack and store in i
-            i = stack.pop();
+            %If stack is not empty, pop from stack and store in i
+            %Otherwise we have covered all the nodes and thus the required
+            %node is not found
+            if(~stack.empty())
+                j = i+1;
+                i = stack.pop();
+            else
+                j = j+1;        
+                break;
+            end
             continue;
         end
-        j=j+1;
+        j = j+1;
         
     end
     if(flag == 1)
@@ -53,15 +60,8 @@ while(i<=n)
 end
                 
 if(flag == 1)
-    stack.push(node);
-    fprintf('\nnode was found and path is below(read left to right):\n');
+    fprintf('\nNode was found and path is below(read left to right):\n');
     disp(stack);
 else
-    fprintf('\nnode was not found');
+    fprintf('\nNode was not found');
 end
-
-
-
-
-
-   
