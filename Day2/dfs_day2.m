@@ -13,10 +13,8 @@ i = 1;
 j = 1;
 flag = 0;
 stack = java.util.Stack();
+
 while(i<=n)
-    if(i == 1 && j > n)
-        break;
-    end
     if(j > n)
         if(~stack.empty())
             j = i+1;
