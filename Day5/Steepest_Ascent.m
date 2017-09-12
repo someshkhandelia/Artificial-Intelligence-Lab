@@ -1,5 +1,8 @@
-% Program to implement steepest ascent hill climbing to solve 8 puzzle
-% problem
+%%%%%%%%%%%%%%%%%%%%%%%%%% DAY 5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%  Perform Steepest Ascent Hill Climbing using MATLAB  %%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% Steepest_ascent.m %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 initial = [2 8 3; 1 -1 4; 7 6 5];
 goal = [1 2 3; 8 -1 4; 7 6 5];
@@ -20,14 +23,12 @@ while(~isequal(curr, goal))
     dist_3 = Distance(temp3, goal);
     dist_4 = Distance(temp4, goal);
     
-   % break;
 
     min_dist_1 = min(dist_1,dist_2);
     min_dist_2 = min(dist_3,dist_4);
     
     min_dist = min(min_dist_1,min_dist_2);
     
-    %min_dist = min(min_dist_3,dist_ini);
 
     if(min_dist == dist_1)
         curr = temp1;

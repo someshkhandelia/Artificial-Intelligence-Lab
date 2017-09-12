@@ -1,3 +1,6 @@
+;DAY 1
+;Write a Program in Lisp to Insert,Delete and Search for an element in a list
+
 (set 'my_list '(1 2 3 4 5))
 
 ;Inserting an element in the list

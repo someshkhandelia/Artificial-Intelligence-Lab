@@ -1,9 +1,11 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%DAY 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%  Perform DFS using MATLAB  %%%%%%%%%%%%%%%%%%%
+
 % Program to perform DFS of a tree whose adjacency matrix is given
-
-n = 6;
-
+n=6;
 my_tree = [0 1 1 0 0 0; 0 0 0 1 0 0; 0 0 0 0 1 1; 0 0 0 0 0 0; 0 0 0 0 0 0; 0 0 0 0 0 0];
-%my_tree = [0 1 1 0 0 0 0 0 0; 0 0 0 1 1 0 0 0 0; 0 0 0 0 0 0 0 1 1; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 1 1 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0];  
 
 fprintf('\nThe tree consists of %d nodes, numbered 1 to %d\n', n, n);
 prompt = 'Enter node you are looking for: ';

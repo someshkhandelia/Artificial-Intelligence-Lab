@@ -1,10 +1,16 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% DAY 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%  Perform BFS using MATLAB  %%%%%%%%%%%%%%%%%%%
+
+
 prompt = 'Enter no. of nodes:  ';
 n = input(prompt);
 
 my_tree = zeros(n,n);
 
 fprintf('Enter the adjacency matrix\n ');
-%fprintf('Enter 1 if j is a child of i in (i,j) else 0\n ');
+fprintf('Enter 1 if j is a child of i in (i,j) else 0\n ');
 
 for i=1:n
     for j=1:n
@@ -27,12 +33,9 @@ my_queue = java.util.PriorityQueue();
 my_queue.add(i);
 
 fprintf('The nodes were traversed as follows :\n');
-%x = 0;
+
 while(~my_queue.isEmpty())
-    %x=x+1;
-    %fprintf('%d iteration queue value\n',x);
-    %disp(my_queue);
-    
+        
     curr_node = my_queue.remove();
     fprintf('%d ',curr_node);
     

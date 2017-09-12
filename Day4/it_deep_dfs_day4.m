@@ -1,9 +1,11 @@
-% Program to perform Iterative Deepening DFS of a tree whose adjacency matrix is given
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  DAY 4  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%  Perform Iterative Deepening DFS using MATLAB  %%%%%%%%%%%%%%%%%%%
 
 n = 6;
 
 my_tree = [0 1 1 0 0 0; 0 0 0 1 0 0; 0 0 0 0 1 1; 0 0 0 0 0 0; 0 0 0 0 0 0; 0 0 0 0 0 0];
-%my_tree = [0 1 1 0 0 0 0 0 0; 0 0 0 1 1 0 0 0 0; 0 0 0 0 0 0 0 1 1; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 1 1 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0; 0 0 0 0 0 0 0 0 0];  
 
 fprintf('\nThe tree consists of %d nodes, numbered 1 to %d\n', n, n);
 prompt = '\nEnter node you are looking for: ';

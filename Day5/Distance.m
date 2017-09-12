@@ -1,3 +1,9 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%% DAY 5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%  Perform Steepest Ascent Hill Climbing using MATLAB  %%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% Distance.m %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function total_dist = Distance(curr, goal)
  
     total_dist = 0;
